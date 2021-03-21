@@ -1,0 +1,34 @@
+Extensions:
+*What happens if there are more guests trying to be checked in than there is free space in the room?
+    *DONE
+--------------------------------------------------------------------------------------------------------------------------------
+Karaoke venues usually have an entry fee - So the guests could have money so they can pay it.
+    * Guest Class - Wallet balance, and all subsequent tests changed
+    * Room Class - Needs to have a cost associated with it
+    * Bar Class - Asks to deduct Guest balance, but the guest themselves must do it - 2ND PART DONE
+    * Bar Class - Then takes the money
+    * Bar Class - Has a till/register
+    *DONE*
+--------------------------------------------------------------------------------------------------------------------------------
+
+Advanced extensions:
+
+Guests could have a favourite song, and if their favourite song is on the room's playlist, 
+    they can cheer loudly! (return a string like "Whoo!")
+    1) Guest __init__, add fave_song
+        guest_test -> Guest has fave song
+            input can be i) Just the name of the song
+                        ii) song_name, and song_artist (2 inputs)
+                        iii) STRING, 'Song_name by song_artist' --> Doesn't match up to how our song_list works
+                            could find a workaround. Go with ii) for now
+    2) Change all guest inputs to include fave_songs
+        -> No other changes to tests required for this. We don't need to compile them or anything
+    3) For each guest, IF room.song_list CONTAINS guest.fave_song, return "guest.name says that's my favourite song!!"
+        -> Test this works in karaoke_bar_test
+    *DONE*
+--------------------------------------------------------------------------------------------------------------------------------
+Rooms can keep track of the entry fees/spending of the guests - maybe add a bar tab/bar class?
+    * Kind of done
+    * Rooms have a set cost each, and the total of income from each room is stored in the karaoke main bar
+    * Could add more spending of guests..
+--------------------------------------------------------------------------------------------------------------------------------
